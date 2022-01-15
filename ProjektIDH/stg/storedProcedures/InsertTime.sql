@@ -7,9 +7,9 @@ DECLARE @pnm VARCHAR(30),
     @ant VARCHAR(30),
     @pnt VARCHAR(30)
 SELECT @korektor = 0
-WHILE @korektor < 730 -- dwa lata 
+WHILE @korektor < 1500 -- dwa lata 
     BEGIN
-    SELECT @data = DATEADD(DAY, @korektor, '2010-01-01')
+    SELECT @data = DATEADD(DAY, @korektor, '2011-01-01')
     IF DATEPART(MM, @data) = 1
 SELECT
         @anm = 'January'
