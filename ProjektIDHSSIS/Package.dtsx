@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/15/2022 11:15:39 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MATXPC"
+  DTS:CreatorName="MatxPC\Matx"
+  DTS:DTSID="{2B4F8058-8A69-4267-AD2E-F7AA825FEF58}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{47B818A0-D7DD-43C3-AABA-A47216C9C0C7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>
