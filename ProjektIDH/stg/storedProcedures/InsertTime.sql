@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [stg].[WstawCzas]
+﻿CREATE PROCEDURE [stg].[InsertTime]
 AS
 DECLARE @korektor INT
 DECLARE @data DATE
@@ -67,7 +67,7 @@ SELECT @pnt = 'Piątek',
     ELSE
 SELECT @pnt = 'Sobota',
         @ant = 'Saturday'
-    INSERT INTO [Date]
+    INSERT INTO [stg].[Date]
     VALUES(
             @data,
             @anm,
