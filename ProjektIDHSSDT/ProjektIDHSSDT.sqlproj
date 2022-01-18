@@ -68,5 +68,9 @@
     <Build Include="security\schemas\dwh.sql" />
     <Build Include="stg\storedProcedures\InsertTime.sql" />
     <Build Include="stg\tables\Date.sql" />
+    <Build Include="stg\tables\SalesTerritory.sql" />
+    <Build Include="stg\tables\Customer.sql" />
+    <Build Include="stg\tables\Status.sql" />
+    <Build Include="stg\tables\SpecialOffer.sql" />
   </ItemGroup>
 </Project>
