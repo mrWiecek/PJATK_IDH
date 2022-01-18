@@ -3,6 +3,7 @@
 	idSpecialOffer INT NOT NULL PRIMARY KEY,
 	[ProductID] [int] NOT NULL,
 	[Description] [nvarchar](255) NOT NULL,
+	[DiscountPct] SMALLMONEY NOT NULL,
 	[Type] [nvarchar](50) NOT NULL,
 	[Category] [nvarchar](50) NOT NULL,
 	[StartDate] [datetime] NOT NULL,
