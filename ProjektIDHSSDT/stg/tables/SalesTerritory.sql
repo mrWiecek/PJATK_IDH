@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[SalesTerritory]
+﻿CREATE TABLE [stg].[SalesTerritory]
 (
 	idSalesTerritory int NOT NULL PRIMARY KEY,
 	territoryName varchar(20) NOT NULL,

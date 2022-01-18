@@ -72,5 +72,6 @@
     <Build Include="stg\tables\Customer.sql" />
     <Build Include="stg\tables\Status.sql" />
     <Build Include="stg\tables\SpecialOffer.sql" />
+    <Build Include="stg\tables\Product.sql" />
   </ItemGroup>
 </Project>
