@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{DE727BE7-270E-4C6E-880B-B2A78415F45A}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{45181F77-7B51-4A9B-B464-495D92B77CBA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -279,8 +279,8 @@
               <connections>
                 <connection
                   refId="Package\Load StageSpecialOffer\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.Stage]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -464,8 +464,8 @@ Sales.SpecialOfferProduct on so.SpecialOfferID=Sales.SpecialOfferProduct.Special
               <connections>
                 <connection
                   refId="Package\Load StageSpecialOffer\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1024,27 +1024,27 @@ Sales.SpecialOfferProduct on so.SpecialOfferID=Sales.SpecialOfferProduct.Special
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="189.333333333334,42.6666666666667"
+          Size="189,43"
           Id="Package\Load StageSpecialOffer"
-          TopLeft="226.249996628612,175.499996861816" />
+          TopLeft="227.249996628612,175.499996861816" />
         <NodeLayout
-          Size="208,42.6666666666667"
+          Size="208,43"
           Id="Package\Truncate StageSpecialOffer"
           TopLeft="211.24999685213,66.9499988028407" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="318.083330073704,109.616665469507">
+          TopLeft="318.499996740371,109.949998802841">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65.8833313923081"
+              EndConnector="0,65.5499980589753"
               Start="0,0"
-              End="0,58.3833313923081">
+              End="0,58.0499980589753">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.3833313923081" />
+                    End="0,58.0499980589753" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1062,43 +1062,51 @@ Sales.SpecialOfferProduct on so.SpecialOfferID=Sales.SpecialOfferProduct.Special
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
-          Id="Package\Load StageSpecialOffer\OLE DB Source"
-          TopLeft="60,34.6666666666667" />
+          Size="155,43"
+          Id="Package\Load StageSpecialOffer\Derived Column"
+          TopLeft="119.333333333333,143.333333333333" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="121,43"
+          Id="Package\Load StageSpecialOffer\Union All"
+          TopLeft="333.5,149.5" />
+        <NodeLayout
+          Size="172,43"
           Id="Package\Load StageSpecialOffer\OLE DB Destination"
           TopLeft="352,223.333333333333" />
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="151,43"
+          Id="Package\Load StageSpecialOffer\OLE DB Source"
+          TopLeft="60,34.6666666666667" />
+        <NodeLayout
+          Size="156,43"
           Id="Package\Load StageSpecialOffer\Conditional Split"
           TopLeft="279.333333333333,48" />
         <EdgeLayout
-          Id="Package\Load StageSpecialOffer.Paths[OLE DB Source Output]"
-          TopLeft="210.666666666667,56">
+          Id="Package\Load StageSpecialOffer.Paths[Union All Output 1]"
+          TopLeft="394.166666666667,192.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="68.6666666666666,13.3333333333333"
+              EndConnector="43.8333333333334,31.1666666666667"
               Start="0,0"
-              End="61.1666666666666,13.3333333333333">
+              End="43.8333333333334,23.6666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="30.3333333333333,0" />
+                    End="0,11.5833333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="30.3333333333333,0"
-                    Point2="34.3333333333333,0"
-                    Point3="34.3333333333333,4" />
+                    Point1="0,11.5833333333333"
+                    Point2="0,15.5833333333333"
+                    Point3="4,15.5833333333333" />
                   <mssgle:LineSegment
-                    End="34.3333333333333,9.33333333333333" />
+                    End="39.8333333333334,15.5833333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="34.3333333333333,9.33333333333333"
-                    Point2="34.3333333333333,13.3333333333333"
-                    Point3="38.3333333333333,13.3333333333333" />
+                    Point1="39.8333333333334,15.5833333333333"
+                    Point2="43.8333333333334,15.5833333333333"
+                    Point3="43.8333333333334,19.5833333333333" />
                   <mssgle:LineSegment
-                    End="61.1666666666666,13.3333333333333" />
+                    End="43.8333333333334,23.6666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1107,50 +1115,6 @@ Sales.SpecialOfferProduct on so.SpecialOfferID=Sales.SpecialOfferProduct.Special
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Load StageSpecialOffer\Derived Column"
-          TopLeft="119.333333333333,143.333333333333" />
-        <EdgeLayout
-          Id="Package\Load StageSpecialOffer.Paths[No ProductID]"
-          TopLeft="357.333333333333,90.6666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-160.666666666667,52.6666666666667"
-              Start="0,0"
-              End="-160.666666666667,45.1666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.3333333333333"
-                    Point2="0,26.3333333333333"
-                    Point3="-4,26.3333333333333" />
-                  <mssgle:LineSegment
-                    End="-156.666666666667,26.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-156.666666666667,26.3333333333333"
-                    Point2="-160.666666666667,26.3333333333333"
-                    Point3="-160.666666666667,30.3333333333333" />
-                  <mssgle:LineSegment
-                    End="-160.666666666667,45.1666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-110.479544270833,31.3333333333333,60.292421875,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="121.333333333334,42.6666666666667"
-          Id="Package\Load StageSpecialOffer\Union All"
-          TopLeft="333.5,149.5" />
         <EdgeLayout
           Id="Package\Load StageSpecialOffer.Paths[Remaining rows]"
           TopLeft="382,90.6666666666667">
@@ -1188,6 +1152,76 @@ Sales.SpecialOfferProduct on so.SpecialOfferID=Sales.SpecialOfferProduct.Special
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Load StageSpecialOffer.Paths[OLE DB Source Output]"
+          TopLeft="210.666666666667,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68.6666666666666,13.3333333333333"
+              Start="0,0"
+              End="61.1666666666666,13.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="30.3333333333333,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.3333333333333,0"
+                    Point2="34.3333333333333,0"
+                    Point3="34.3333333333333,4" />
+                  <mssgle:LineSegment
+                    End="34.3333333333333,9.33333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.3333333333333,9.33333333333333"
+                    Point2="34.3333333333333,13.3333333333333"
+                    Point3="38.3333333333333,13.3333333333333" />
+                  <mssgle:LineSegment
+                    End="61.1666666666666,13.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load StageSpecialOffer.Paths[No ProductID]"
+          TopLeft="357.333333333333,90.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-160.666666666667,52.6666666666667"
+              Start="0,0"
+              End="-160.666666666667,45.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.3333333333333"
+                    Point2="0,26.3333333333333"
+                    Point3="-4,26.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-156.666666666667,26.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-156.666666666667,26.3333333333333"
+                    Point2="-160.666666666667,26.3333333333333"
+                    Point3="-160.666666666667,30.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-160.666666666667,45.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-110.479544270833,31.3333333333333,60.292421875,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Load StageSpecialOffer.Paths[Derived Column Output]"
           TopLeft="274,167.75">
           <EdgeLayout.Curve>
@@ -1201,40 +1235,6 @@ Sales.SpecialOfferProduct on so.SpecialOfferID=Sales.SpecialOfferProduct.Special
                   Capacity="5">
                   <mssgle:LineSegment
                     End="51.9999999999999,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load StageSpecialOffer.Paths[Union All Output 1]"
-          TopLeft="394.166666666667,192.166666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="43.8333333333334,31.1666666666667"
-              Start="0,0"
-              End="43.8333333333334,23.6666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.5833333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.5833333333333"
-                    Point2="0,15.5833333333333"
-                    Point3="4,15.5833333333333" />
-                  <mssgle:LineSegment
-                    End="39.8333333333334,15.5833333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="39.8333333333334,15.5833333333333"
-                    Point2="43.8333333333334,15.5833333333333"
-                    Point3="43.8333333333334,19.5833333333333" />
-                  <mssgle:LineSegment
-                    End="43.8333333333334,23.6666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
