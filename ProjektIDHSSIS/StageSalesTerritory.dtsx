@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{068257D2-23DF-4F47-9B57-39825469D90C}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{9505C8CC-1D6B-4CF5-AD72-682BCE508AE8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -266,13 +266,13 @@
                       name="idSalesTerritory" />
                     <externalMetadataColumn
                       refId="Package\Load StageSalesTerritory\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[territoryName]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="50"
                       name="territoryName" />
                     <externalMetadataColumn
                       refId="Package\Load StageSalesTerritory\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[countryRegionCode]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="3"
                       name="countryRegionCode" />
@@ -482,7 +482,7 @@ FROM   Sales.SalesTerritory</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{D3647E71-F3D8-4CE9-9353-6F54542559CA}"
+          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
           SQLTask:SqlStatementSource="truncate table stg.SalesTerritory" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>

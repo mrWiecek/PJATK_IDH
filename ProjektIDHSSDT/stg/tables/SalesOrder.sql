@@ -4,8 +4,12 @@
 	[idCustomer] INT NOT NULL,
 	[idProduct] INT NOT NULL,
 	[idTerritory] INT NOT NULL,
-	[idSpecialOffer] INT NOT NULL,
 	[idStatus] INT NOT NULL,
+	[UnitPrice] [money] NOT NULL,
+	[UnitPriceDiscount] [money] NOT NULL,
+	[SubTotal] [money] NOT NULL,
+	[TaxAmt] [money] NOT NULL,
+	[Freight] [money] NOT NULL,
 	[Date] date NOT NULL,
 	[TotalDue] MONEY NOT NULL,
 	[OrderQty] INT NOT NULL,
@@ -14,7 +18,6 @@
         [idCustomer],
 		[idProduct],
 		[idTerritory],
-		[idSpecialOffer],
 		[idStatus],
 		[Date]
     )
