@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="MATXPC"
   DTS:CreatorName="MatxPC\Matx"
-  DTS:DTSID="{67D1B03D-98EB-4261-AACE-DB295E499081}"
+  DTS:DTSID="{00E8FBF5-8B64-4C6F-9C8A-6643589B3B68}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{2572E4CD-8381-49EB-8AEB-66705423B2B3}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{29C95787-E87E-4168-8CE9-116B80E0C4C1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{15BAE11D-3FD8-4B65-A1C5-6ED6D2A6448F}"
+      DTS:DTSID="{E74C0948-04F2-4365-89AB-1267172AE365}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -90,7 +90,7 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerID="{0B3B5358-838E-4D98-8BED-217178301697}:external"
                   connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -195,8 +195,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                  connectionManagerID="{48F43A14-A62D-4B77-BC92-49AB841F708B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)\MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -379,7 +379,7 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{8ACD4FE9-A774-4667-A3AB-CFC2BF7387F4}"
+      DTS:DTSID="{9A92C6A4-42A8-440E-A3FB-6C66E78C16F1}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
@@ -388,7 +388,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
+          SQLTask:Connection="{0B3B5358-838E-4D98-8BED-217178301697}"
           SQLTask:SqlStatementSource="truncate table stg.Customer;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -397,7 +397,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{A8B5B01A-9746-48B5-84E4-B50D56E01D97}"
+      DTS:DTSID="{7CF5EC8A-8C94-46DA-AEA0-8CC7E3BA3256}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -466,13 +466,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="596,353" />
-        <NodeLayout
           Size="150,42"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="596,173" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="596,353" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="671,215">
@@ -511,7 +511,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -524,7 +524,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

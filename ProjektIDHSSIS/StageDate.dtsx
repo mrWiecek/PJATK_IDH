@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="StageDate"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{D95A4ADB-3007-40A8-BF3B-626BF527B3EE}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{DD6AC36F-ECA6-4443-9BBB-58065704C08D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -30,7 +30,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{0B3B5358-838E-4D98-8BED-217178301697}"
+          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
           SQLTask:SqlStatementSource="truncate table stg.Date;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -47,7 +47,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{0B3B5358-838E-4D98-8BED-217178301697}"
+          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
           SQLTask:SqlStatementSource="exec stg.InsertTime;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>

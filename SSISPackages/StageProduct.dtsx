@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="MATXPC"
   DTS:CreatorName="MatxPC\Matx"
-  DTS:DTSID="{D60E4061-FB7A-4A54-A730-A326F56C07FA}"
+  DTS:DTSID="{87B78CCB-D572-4012-9AF4-B2F6656339F5}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{90FF09A9-3E0F-4E67-A202-22A4D1DB0194}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{D0CA341E-52F3-4BAA-8714-601D9DB892ED}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{7FB3E44F-3E06-4849-B7FD-D3BC296F319E}"
+      DTS:DTSID="{E4C5A78B-4062-44F9-982F-FDF25AB741DC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -452,7 +452,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -464,7 +464,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -473,7 +473,7 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerID="{0B3B5358-838E-4D98-8BED-217178301697}:external"
                   connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -592,7 +592,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Production].[Product]</property>
+                  name="OpenRowset"></property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -631,8 +631,8 @@ FROM Production.Product PP
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                  connectionManagerID="{48F43A14-A62D-4B77-BC92-49AB841F708B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)\MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1384,7 +1384,7 @@ FROM Production.Product PP
       DTS:refId="Package\truncate"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{5BAA4274-D890-4D51-9858-06FCD57F198A}"
+      DTS:DTSID="{06201D7F-2201-48BE-AECB-7EB26D3ED37E}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="truncate"
@@ -1393,7 +1393,7 @@ FROM Production.Product PP
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
+          SQLTask:Connection="{0B3B5358-838E-4D98-8BED-217178301697}"
           SQLTask:SqlStatementSource="truncate table stg.Product;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1402,7 +1402,7 @@ FROM Production.Product PP
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{D15FC3EA-FFFA-460C-B072-16C6F03CE223}"
+      DTS:DTSID="{3690FA02-A682-4365-8BBD-1A5024583ACC}"
       DTS:From="Package\truncate"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1465,7 +1465,7 @@ FROM Production.Product PP
         <NodeLayout
           Size="150,42"
           Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="775,74" />
+          TopLeft="776,72" />
         <NodeLayout
           Size="163,42"
           Id="Package\Data Flow Task\Derived Column 2"
@@ -1490,40 +1490,6 @@ FROM Production.Product PP
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="736,794" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="1209.5,604">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-379.5,83"
-              Start="0,0"
-              End="-379.5,75.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.5"
-                    Point2="0,41.5"
-                    Point3="-4,41.5" />
-                  <mssgle:LineSegment
-                    End="-375.5,41.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-375.5,41.5"
-                    Point2="-379.5,41.5"
-                    Point3="-379.5,45.5" />
-                  <mssgle:LineSegment
-                    End="-379.5,75.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
           TopLeft="830,729">
@@ -1668,64 +1634,18 @@ FROM Production.Product PP
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="850,116">
+          TopLeft="854.75,114">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.5,49"
+              EndConnector="0,51"
               Start="0,0"
-              End="8.5,41.5">
+              End="0,43.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.5"
-                    Point2="0,24.5"
-                    Point3="4,24.5" />
-                  <mssgle:LineSegment
-                    End="4.5,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.5,24.5"
-                    Point2="8.5,24.5"
-                    Point3="8.5,28.5" />
-                  <mssgle:LineSegment
-                    End="8.5,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
-          TopLeft="593.5,428">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="604.7,134"
-              Start="0,0"
-              End="604.7,126.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,69.901549680948" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,69.901549680948"
-                    Point2="0,73.901549680948"
-                    Point3="4,73.901549680948" />
-                  <mssgle:LineSegment
-                    End="600.7,73.901549680948" />
-                  <mssgle:CubicBezierSegment
-                    Point1="600.7,73.901549680948"
-                    Point2="604.7,73.901549680948"
-                    Point3="604.7,77.901549680948" />
-                  <mssgle:LineSegment
-                    End="604.7,126.5" />
+                    End="0,43.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1838,6 +1758,74 @@ FROM Production.Product PP
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="1209.5,604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-379.5,83"
+              Start="0,0"
+              End="-379.5,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.5"
+                    Point2="0,41.5"
+                    Point3="-4,41.5" />
+                  <mssgle:LineSegment
+                    End="-375.5,41.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-375.5,41.5"
+                    Point2="-379.5,41.5"
+                    Point3="-379.5,45.5" />
+                  <mssgle:LineSegment
+                    End="-379.5,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
+          TopLeft="593.5,428">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="604.7,134"
+              Start="0,0"
+              End="604.7,126.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.901549680948" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,69.901549680948"
+                    Point2="0,73.901549680948"
+                    Point3="4,73.901549680948" />
+                  <mssgle:LineSegment
+                    End="600.7,73.901549680948" />
+                  <mssgle:CubicBezierSegment
+                    Point1="600.7,73.901549680948"
+                    Point2="604.7,73.901549680948"
+                    Point3="604.7,77.901549680948" />
+                  <mssgle:LineSegment
+                    End="604.7,126.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -1846,11 +1834,6 @@ FROM Production.Product PP
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

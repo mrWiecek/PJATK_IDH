@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{E7E8A1CF-3B7B-45E2-80F3-47A9D708A00A}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{9505C8CC-1D6B-4CF5-AD72-682BCE508AE8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -196,7 +196,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
+                  name="AlwaysUseDefaultCodePage">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
@@ -222,8 +222,8 @@
               <connections>
                 <connection
                   refId="Package\Load StageSalesTerritory\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.Stage]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -356,8 +356,8 @@ FROM   Sales.SalesTerritory</property>
               <connections>
                 <connection
                   refId="Package\Load StageSalesTerritory\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -482,8 +482,8 @@ FROM   Sales.SalesTerritory</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{D3647E71-F3D8-4CE9-9353-6F54542559CA}"
-          SQLTask:SqlStatementSource="truncate table SalesTerritory" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
+          SQLTask:SqlStatementSource="truncate table stg.SalesTerritory" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -510,11 +510,11 @@ FROM   Sales.SalesTerritory</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="196.666666666667,42.6666666666667"
+          Size="197,43"
           Id="Package\Load StageSalesTerritory"
           TopLeft="194.999997094273,170.299996954799" />
         <NodeLayout
-          Size="216,42.6666666666667"
+          Size="216,43"
           Id="Package\Truncate StageSalesTerritory"
           TopLeft="193.7499971129,63.0499988725782" />
         <EdgeLayout
@@ -560,15 +560,15 @@ FROM   Sales.SalesTerritory</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\Load StageSalesTerritory\OLE DB Source"
           TopLeft="58.7499991245568,81.8999985355139" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Load StageSalesTerritory\OLE DB Destination"
           TopLeft="334.999995008111,214.499996164441" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157,43"
           Id="Package\Load StageSalesTerritory\Data Conversion"
           TopLeft="299.374995538965,94.8999983030558" />
         <EdgeLayout
