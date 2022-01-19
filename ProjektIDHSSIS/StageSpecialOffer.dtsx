@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{45181F77-7B51-4A9B-B464-495D92B77CBA}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{E0C25082-BFF7-402F-978F-E31DA075E6F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -996,8 +996,8 @@ Sales.SpecialOfferProduct on so.SpecialOfferID=Sales.SpecialOfferProduct.Special
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{3E9A24FE-2B87-48D2-8BDC-65CEAEFF7734}"
-          SQLTask:SqlStatementSource="truncate table SpecialOffer" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
+          SQLTask:SqlStatementSource="truncate table stg.SpecialOffer" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1028,23 +1028,23 @@ Sales.SpecialOfferProduct on so.SpecialOfferID=Sales.SpecialOfferProduct.Special
           Id="Package\Load StageSpecialOffer"
           TopLeft="227.249996628612,175.499996861816" />
         <NodeLayout
-          Size="208,43"
+          Size="207,42"
           Id="Package\Truncate StageSpecialOffer"
           TopLeft="211.24999685213,66.9499988028407" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="318.499996740371,109.949998802841">
+          TopLeft="318.249996740371,108.949998802841">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65.5499980589753"
+              EndConnector="0,66.5499980589753"
               Start="0,0"
-              End="0,58.0499980589753">
+              End="0,59.0499980589753">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.0499980589753" />
+                    End="0,59.0499980589753" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
