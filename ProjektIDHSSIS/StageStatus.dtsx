@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="StageStatus"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{A2D54750-5795-4D39-A0BA-8E64053F2B50}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{5537E393-E594-4164-96A9-88A5391D02D3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -149,6 +149,627 @@
           version="1">
           <components>
             <component
+              refId="Package\Load StageStatus\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load StageStatus\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Conditional Split.Inputs[Conditional Split Input].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load StageStatus\Conditional Split.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\Load StageStatus\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]} == 1</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Status == 1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Conditional Split.Outputs[Case 2]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 2"
+                  synchronousInputId="Package\Load StageStatus\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]} == 2</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Status == 2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Conditional Split.Outputs[Case 3]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 3"
+                  synchronousInputId="Package\Load StageStatus\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]} == 3</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Status == 3</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Conditional Split.Outputs[Case 4]"
+                  description="Output 4 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 4"
+                  synchronousInputId="Package\Load StageStatus\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]} == 4</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Status == 4</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">3</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Conditional Split.Outputs[Case 5]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Case 5"
+                  synchronousInputId="Package\Load StageStatus\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Load StageStatus\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load StageStatus\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load StageStatus\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load StageStatus\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Data Conversion.Inputs[Data Conversion Input].Columns[orderstatus]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="orderstatus"
+                      lineageId="Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[orderstatus]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load StageStatus\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of orderstatus]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of orderstatus]"
+                      name="Copy of orderstatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[orderstatus]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load StageStatus\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load StageStatus\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load StageStatus\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Output].Columns[orderstatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Output].Columns[orderstatus]"
+                      name="orderstatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Rejected"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Rejected"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load StageStatus\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load StageStatus\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Output].Columns[orderstatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="7"
+                      lineageId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Output].Columns[orderstatus]"
+                      name="orderstatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Shipped"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Shipped"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load StageStatus\Derived Column 2"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load StageStatus\Derived Column 2.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Output].Columns[orderstatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Output].Columns[orderstatus]"
+                      name="orderstatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Backordered"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Backordered"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load StageStatus\Derived Column 3"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 3"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load StageStatus\Derived Column 3.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column 3.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Output].Columns[orderstatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Output].Columns[orderstatus]"
+                      name="orderstatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Approved"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Approved"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column 3.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load StageStatus\Derived Column 4"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 4"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load StageStatus\Derived Column 4.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column 4.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Output].Columns[orderstatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Output].Columns[orderstatus]"
+                      name="orderstatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"In process"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"In process"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load StageStatus\Derived Column 4.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Load StageStatus\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -221,17 +842,19 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load StageStatus\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SalesOrderID]"
-                      cachedDataType="i4"
-                      cachedName="SalesOrderID"
-                      externalMetadataColumnId="Package\Load StageStatus\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idStatus]"
-                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[SalesOrderID]" />
-                    <inputColumn
                       refId="Package\Load StageStatus\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Status]"
                       cachedDataType="ui1"
                       cachedName="Status"
+                      externalMetadataColumnId="Package\Load StageStatus\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idStatus]"
+                      lineageId="Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\Load StageStatus\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of orderstatus]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of orderstatus"
                       externalMetadataColumnId="Package\Load StageStatus\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[orderstatus]"
-                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]" />
+                      lineageId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of orderstatus]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -296,7 +919,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select distinct Status from Sales.SalesOrderHeader</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -313,7 +936,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -333,15 +956,6 @@
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[SalesOrderID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderID]"
-                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[SalesOrderID]"
-                      name="SalesOrderID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]"
                       dataType="ui1"
                       errorOrTruncationOperation="Conversion"
@@ -354,115 +968,9 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
-                      dataType="dbTimeStamp"
-                      name="ModifiedDate" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderID]"
-                      dataType="i4"
-                      name="SalesOrderID" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
-                      dataType="guid"
-                      name="rowguid" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RevisionNumber]"
-                      dataType="ui1"
-                      name="RevisionNumber" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
-                      dataType="dbTimeStamp"
-                      name="OrderDate" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DueDate]"
-                      dataType="dbTimeStamp"
-                      name="DueDate" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipDate]"
-                      dataType="dbTimeStamp"
-                      name="ShipDate" />
-                    <externalMetadataColumn
                       refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Status]"
                       dataType="ui1"
                       name="Status" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OnlineOrderFlag]"
-                      dataType="bool"
-                      name="OnlineOrderFlag" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderNumber]"
-                      dataType="wstr"
-                      length="25"
-                      name="SalesOrderNumber" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PurchaseOrderNumber]"
-                      dataType="wstr"
-                      length="25"
-                      name="PurchaseOrderNumber" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AccountNumber]"
-                      dataType="wstr"
-                      length="15"
-                      name="AccountNumber" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
-                      dataType="i4"
-                      name="CustomerID" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesPersonID]"
-                      dataType="i4"
-                      name="SalesPersonID" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TerritoryID]"
-                      dataType="i4"
-                      name="TerritoryID" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BillToAddressID]"
-                      dataType="i4"
-                      name="BillToAddressID" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipToAddressID]"
-                      dataType="i4"
-                      name="ShipToAddressID" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipMethodID]"
-                      dataType="i4"
-                      name="ShipMethodID" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreditCardID]"
-                      dataType="i4"
-                      name="CreditCardID" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreditCardApprovalCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="CreditCardApprovalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyRateID]"
-                      dataType="i4"
-                      name="CurrencyRateID" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SubTotal]"
-                      dataType="cy"
-                      name="SubTotal" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TaxAmt]"
-                      dataType="cy"
-                      name="TaxAmt" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Freight]"
-                      dataType="cy"
-                      name="Freight" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TotalDue]"
-                      dataType="cy"
-                      name="TotalDue" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Comment]"
-                      dataType="wstr"
-                      length="128"
-                      name="Comment" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -483,11 +991,6 @@
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SalesOrderID]"
-                      dataType="i4"
-                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SalesOrderID]"
-                      name="SalesOrderID" />
-                    <outputColumn
                       refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Status]"
                       dataType="ui1"
                       lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Status]"
@@ -497,13 +1000,285 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Load StageStatus\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Load StageStatus\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 2].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 2].Columns[orderstatus]"
+                      cachedDataType="wstr"
+                      cachedLength="7"
+                      cachedName="orderstatus"
+                      lineageId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Output].Columns[orderstatus]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[orderstatus]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Load StageStatus\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 3].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 3].Columns[orderstatus]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="orderstatus"
+                      lineageId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Output].Columns[orderstatus]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[orderstatus]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Load StageStatus\Union All.Inputs[Union All Input 1]"
+                  hasSideEffects="true"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 1].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 1].Columns[orderstatus]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="orderstatus"
+                      lineageId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Output].Columns[orderstatus]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[orderstatus]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Load StageStatus\Union All.Inputs[Union All Input 4]"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 4].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 4].Columns[orderstatus]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="orderstatus"
+                      lineageId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Output].Columns[orderstatus]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[orderstatus]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Load StageStatus\Union All.Inputs[Union All Input 5]"
+                  hasSideEffects="true"
+                  name="Union All Input 5">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 5].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load StageStatus\Union All.Inputs[Union All Input 5].Columns[orderstatus]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="orderstatus"
+                      lineageId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Output].Columns[orderstatus]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[orderstatus]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Load StageStatus\Union All.Inputs[Union All Input 6]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 6">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load StageStatus\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[Status]"
+                      dataType="ui1"
+                      lineageId="Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[orderstatus]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Load StageStatus\Union All.Outputs[Union All Output 1].Columns[orderstatus]"
+                      name="orderstatus" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
-              refId="Package\Load StageStatus.Paths[OLE DB Source Output]"
+              refId="Package\Load StageStatus.Paths[Case 1]"
+              endId="Package\Load StageStatus\Derived Column 4.Inputs[Derived Column Input]"
+              name="Case 1"
+              startId="Package\Load StageStatus\Conditional Split.Outputs[Case 1]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Case 2]"
+              endId="Package\Load StageStatus\Derived Column 3.Inputs[Derived Column Input]"
+              name="Case 2"
+              startId="Package\Load StageStatus\Conditional Split.Outputs[Case 2]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Case 3]"
+              endId="Package\Load StageStatus\Derived Column 2.Inputs[Derived Column Input]"
+              name="Case 3"
+              startId="Package\Load StageStatus\Conditional Split.Outputs[Case 3]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Case 4]"
+              endId="Package\Load StageStatus\Derived Column.Inputs[Derived Column Input]"
+              name="Case 4"
+              startId="Package\Load StageStatus\Conditional Split.Outputs[Case 4]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Case 5]"
+              endId="Package\Load StageStatus\Derived Column 1.Inputs[Derived Column Input]"
+              name="Case 5"
+              startId="Package\Load StageStatus\Conditional Split.Outputs[Case 5]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Data Conversion Output]"
               endId="Package\Load StageStatus\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Load StageStatus\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Derived Column Output]"
+              endId="Package\Load StageStatus\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Load StageStatus\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Derived Column Output1]"
+              endId="Package\Load StageStatus\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\Load StageStatus\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Derived Column Output2]"
+              endId="Package\Load StageStatus\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Load StageStatus\Derived Column 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Derived Column Output3]"
+              endId="Package\Load StageStatus\Union All.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\Load StageStatus\Derived Column 3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Derived Column Output4]"
+              endId="Package\Load StageStatus\Union All.Inputs[Union All Input 5]"
+              name="Derived Column Output"
+              startId="Package\Load StageStatus\Derived Column 4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load StageStatus.Paths[OLE DB Source Output]"
+              endId="Package\Load StageStatus\Conditional Split.Inputs[Conditional Split Input]"
               name="OLE DB Source Output"
               startId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Load StageStatus.Paths[Union All Output 1]"
+              endId="Package\Load StageStatus\Data Conversion.Inputs[Data Conversion Input]"
+              name="Union All Output 1"
+              startId="Package\Load StageStatus\Union All.Outputs[Union All Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -555,21 +1330,21 @@
         <NodeLayout
           Size="180,42"
           Id="Package\Truncate StageStatus"
-          TopLeft="219.999996721745,70.8499987331033" />
+          TopLeft="219.999996721745,71.4999987214804" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="309.312496661209,112.849998733103">
+          TopLeft="309.395829994542,113.49999872148">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,81.4999977916477"
+              EndConnector="0,80.8499978032706"
               Start="0,0"
-              End="0,73.9999977916477">
+              End="0,73.3499978032706">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,73.9999977916477" />
+                    End="0,73.3499978032706" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -585,41 +1360,479 @@
     design-time-name="Package\Load StageStatus">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150.666666666667,42.6666666666667"
           Id="Package\Load StageStatus\OLE DB Source"
-          TopLeft="194.749997187406,90.3999984192847" />
+          TopLeft="72.4062490104695,26.5227268342266" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,42"
           Id="Package\Load StageStatus\OLE DB Destination"
-          TopLeft="135.62499797903,276.249995060265" />
+          TopLeft="502.656242509838,428.666659228007" />
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Load StageStatus\Data Conversion"
+          TopLeft="381.406244316604,344.533330450853" />
         <EdgeLayout
-          Id="Package\Load StageStatus.Paths[OLE DB Source Output]"
-          TopLeft="270.083330520739,133.066665085951">
+          Id="Package\Load StageStatus.Paths[Data Conversion Output]"
+          TopLeft="460.072910983271,387.199997117519">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-48.4583325417089,143.183329974314"
+              EndConnector="128.583331526567,41.4666621104876"
               Start="0,0"
-              End="-48.4583325417089,135.683329974314">
+              End="128.583331526567,33.9666621104876">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.5916649871568" />
+                    End="0,16.7333310552438" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,67.5916649871568"
-                    Point2="0,71.5916649871568"
-                    Point3="-4,71.5916649871568" />
+                    Point1="0,16.7333310552438"
+                    Point2="0,20.7333310552438"
+                    Point3="4,20.7333310552438" />
                   <mssgle:LineSegment
-                    End="-44.4583325417089,71.5916649871568" />
+                    End="124.583331526567,20.7333310552438" />
                   <mssgle:CubicBezierSegment
-                    Point1="-44.4583325417089,71.5916649871568"
-                    Point2="-48.4583325417089,71.5916649871568"
-                    Point3="-48.4583325417089,75.5916649871568" />
+                    Point1="124.583331526567,20.7333310552438"
+                    Point2="128.583331526567,20.7333310552438"
+                    Point3="128.583331526567,24.7333310552438" />
                   <mssgle:LineSegment
-                    End="-48.4583325417089,135.683329974314" />
+                    End="128.583331526567,33.9666621104876" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Load StageStatus\Conditional Split"
+          TopLeft="270.468745969702,31.8499994304776" />
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[OLE DB Source Output]"
+          TopLeft="223.072915677136,50.5196964656855">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.3958302925654,0"
+              Start="0,0"
+              End="39.8958302925654,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.8958302925654,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Load StageStatus\Derived Column 1"
+          TopLeft="26.7187496018597,102.537498166487" />
+        <NodeLayout
+          Size="121.333333333334,42.6666666666667"
+          Id="Package\Load StageStatus\Union All"
+          TopLeft="434.218743529637,277.387495039925" />
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Derived Column Output]"
+          TopLeft="108.71874960186,145.204164833153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="386.166660594444,132.183330206772"
+              Start="0,0"
+              End="386.166660594444,124.683330206772">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,116.529164129968" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,116.529164129968"
+                    Point2="0,120.529164129968"
+                    Point3="4,120.529164129968" />
+                  <mssgle:LineSegment
+                    End="382.166660594444,120.529164129968" />
+                  <mssgle:CubicBezierSegment
+                    Point1="382.166660594444,120.529164129968"
+                    Point2="386.166660594444,120.529164129968"
+                    Point3="386.166660594444,124.529164129968" />
+                  <mssgle:LineSegment
+                    End="386.166660594444,124.683330206772" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Union All Output 1]"
+          TopLeft="494.885410196303,320.054161706592">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-34.8124992130325,24.479168744261"
+              Start="0,0"
+              End="-34.8124992130325,16.979168744261">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.23958437213051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.23958437213051"
+                    Point2="0,12.2395843721305"
+                    Point3="-4,12.2395843721305" />
+                  <mssgle:LineSegment
+                    End="-30.8124992130325,12.2395843721305" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-30.8124992130325,12.2395843721305"
+                    Point2="-34.8124992130325,12.2395843721305"
+                    Point3="-34.8124992130325,16.2395843721305" />
+                  <mssgle:LineSegment
+                    End="-34.8124992130325,16.979168744261" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Case 5]"
+          TopLeft="348.468745969702,74.5166660971443">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-239.749996367842,28.0208320693424"
+              Start="0,0"
+              End="-239.749996367842,20.5208320693424">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.0104160346712" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.0104160346712"
+                    Point2="0,14.0104160346712"
+                    Point3="-4,14.0104160346712" />
+                  <mssgle:LineSegment
+                    End="-235.749996367842,14.0104160346712" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-235.749996367842,14.0104160346712"
+                    Point2="-239.749996367842,14.0104160346712"
+                    Point3="-239.749996367842,18.0104160346712" />
+                  <mssgle:LineSegment
+                    End="-239.749996367842,20.5208320693424" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-135.237127090171,19.0104160346712,30.7242578125,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Load StageStatus\Derived Column"
+          TopLeft="135.156247986015,165.749997036159" />
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Case 4]"
+          TopLeft="373.135412636368,74.5166660971443">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-160.64583131702,91.2333309390148"
+              Start="0,0"
+              End="-160.64583131702,83.7333309390148">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.0490684016304" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.0490684016304"
+                    Point2="0,37.0490684016304"
+                    Point3="-4,37.0490684016304" />
+                  <mssgle:LineSegment
+                    End="-156.64583131702,37.0490684016304" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-156.64583131702,37.0490684016304"
+                    Point2="-160.64583131702,37.0490684016304"
+                    Point3="-160.64583131702,41.0490684016304" />
+                  <mssgle:LineSegment
+                    End="-160.64583131702,83.7333309390148" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-95.8217633147599,42.0490684016304,30.9976953125,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Load StageStatus\Derived Column 2"
+          TopLeft="321.09374521533,155.999997210503" />
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Case 3]"
+          TopLeft="385.468745969702,74.5166660971443">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.6249992456287,81.4833311133584"
+              Start="0,0"
+              End="17.6249992456287,73.9833311133584">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.074088870989" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.074088870989"
+                    Point2="0,28.074088870989"
+                    Point3="4,28.074088870989" />
+                  <mssgle:LineSegment
+                    End="13.6249992456287,28.074088870989" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.6249992456287,28.074088870989"
+                    Point2="17.6249992456287,28.074088870989"
+                    Point3="17.6249992456287,32.074088870989" />
+                  <mssgle:LineSegment
+                    End="17.6249992456287,73.9833311133584" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-6.52765662718564,33.074088870989,30.6803125,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Load StageStatus\Derived Column 3"
+          TopLeft="500.781242537778,119.437497864291" />
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Case 2]"
+          TopLeft="392.868745969702,74.5166660971443">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="189.912496568077,44.9208317671468"
+              Start="0,0"
+              End="189.912496568077,37.4208317671468">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.52455149978613" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.52455149978613"
+                    Point2="0,13.5245514997861"
+                    Point3="4,13.5245514997861" />
+                  <mssgle:LineSegment
+                    End="185.912496568077,13.5245514997861" />
+                  <mssgle:CubicBezierSegment
+                    Point1="185.912496568077,13.5245514997861"
+                    Point2="189.912496568077,13.5245514997861"
+                    Point3="189.912496568077,17.5245514997861" />
+                  <mssgle:LineSegment
+                    End="189.912496568077,37.4208317671468" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="79.5526154715383,18.5245514997861,30.807265625,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Load StageStatus\Derived Column 4"
+          TopLeft="606.249990966171,51.9999990701676" />
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Case 1]"
+          TopLeft="426.468745969702,53.183332763811">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="179.781244996469,20.1499996396899"
+              Start="0,0"
+              End="172.281244996469,20.1499996396899">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="85.8906224982347,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85.8906224982347,0"
+                    Point2="89.8906224982347,0"
+                    Point3="89.8906224982347,4" />
+                  <mssgle:LineSegment
+                    End="89.8906224982347,16.1499996396899" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.8906224982347,16.1499996396899"
+                    Point2="89.8906224982347,20.1499996396899"
+                    Point3="93.8906224982347,20.1499996396899" />
+                  <mssgle:LineSegment
+                    End="172.281244996469,20.1499996396899" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="74.6725365607347,-15.5537109375,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Derived Column Output1]"
+          TopLeft="212.489581319348,208.416663702826">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="301.284717765844,68.9708313370993"
+              Start="0,0"
+              End="301.284717765844,61.4708313370993">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.8438979501694" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.8438979501694"
+                    Point2="0,40.8438979501694"
+                    Point3="4,40.8438979501694" />
+                  <mssgle:LineSegment
+                    End="297.284717765844,40.8438979501694" />
+                  <mssgle:CubicBezierSegment
+                    Point1="297.284717765844,40.8438979501694"
+                    Point2="301.284717765844,40.8438979501694"
+                    Point3="301.284717765844,44.8438979501694" />
+                  <mssgle:LineSegment
+                    End="301.284717765844,61.4708313370993" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Derived Column Output2]"
+          TopLeft="403.09374521533,198.666663877169">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.124998314306,78.7208311627557"
+              Start="0,0"
+              End="120.124998314306,71.2208311627557">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.3519400416543" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.3519400416543"
+                    Point2="0,51.3519400416543"
+                    Point3="4,51.3519400416543" />
+                  <mssgle:LineSegment
+                    End="116.124998314306,51.3519400416543" />
+                  <mssgle:CubicBezierSegment
+                    Point1="116.124998314306,51.3519400416543"
+                    Point2="120.124998314306,51.3519400416543"
+                    Point3="120.124998314306,55.3519400416543" />
+                  <mssgle:LineSegment
+                    End="120.124998314306,71.2208311627557" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Derived Column Output3]"
+          TopLeft="582.781242537778,162.104164530958">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-53.8958323414749,115.283330508967"
+              Start="0,0"
+              End="-53.8958323414749,107.783330508967">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.0823135596643" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76.0823135596643"
+                    Point2="0,80.0823135596643"
+                    Point3="-4,80.0823135596643" />
+                  <mssgle:LineSegment
+                    End="-49.8958323414749,80.0823135596643" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-49.8958323414749,80.0823135596643"
+                    Point2="-53.8958323414749,80.0823135596643"
+                    Point3="-53.8958323414749,84.0823135596643" />
+                  <mssgle:LineSegment
+                    End="-53.8958323414749,107.783330508967" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load StageStatus.Paths[Derived Column Output4]"
+          TopLeft="688.249990966171,94.6666657368342">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-155.58680299209,182.720829303091"
+              Start="0,0"
+              End="-155.58680299209,175.220829303091">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,128.666985105702" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,128.666985105702"
+                    Point2="0,132.666985105702"
+                    Point3="-4,132.666985105702" />
+                  <mssgle:LineSegment
+                    End="-151.58680299209,132.666985105702" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-151.58680299209,132.666985105702"
+                    Point2="-155.58680299209,132.666985105702"
+                    Point3="-155.58680299209,136.666985105702" />
+                  <mssgle:LineSegment
+                    End="-155.58680299209,175.220829303091" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
