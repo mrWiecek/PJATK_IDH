@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="StageStatus"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{20E67ECA-FB58-499B-A7A1-AD70567C7987}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{A2D54750-5795-4D39-A0BA-8E64053F2B50}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -67,6 +67,18 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.AdventureWorks2016 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7F55107A-08C3-4487-B389-7D38E1EE648D}"
+      DTS:ObjectName="MIREK.AdventureWorks2016 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=AdventureWorks2016;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[MIREK.Stage]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{67C6B111-7A23-4ACE-9C0A-B7F8F605E043}"
@@ -76,6 +88,18 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=MIREK;Initial Catalog=Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.Staging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{696D5F88-8A95-46D9-ABA6-C4E318764E3B}"
+      DTS:ObjectName="MIREK.Staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -183,8 +207,8 @@
               <connections>
                 <connection
                   refId="Package\Load StageStatus\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.Staging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -298,8 +322,8 @@
               <connections>
                 <connection
                   refId="Package\Load StageStatus\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -330,9 +354,17 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
+                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
                       refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderID]"
                       dataType="i4"
                       name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
                     <externalMetadataColumn
                       refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RevisionNumber]"
                       dataType="ui1"
@@ -431,14 +463,6 @@
                       dataType="wstr"
                       length="128"
                       name="Comment" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
-                      dataType="guid"
-                      name="rowguid" />
-                    <externalMetadataColumn
-                      refId="Package\Load StageStatus\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
-                      dataType="dbTimeStamp"
-                      name="ModifiedDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -497,7 +521,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
+          SQLTask:Connection="{696D5F88-8A95-46D9-ABA6-C4E318764E3B}"
           SQLTask:SqlStatementSource="truncate table stg.Status" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -525,7 +549,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="161,43"
+          Size="161.333333333334,42.6666666666667"
           Id="Package\Load StageStatus"
           TopLeft="228.124996600673,194.349996524751" />
         <NodeLayout
@@ -563,39 +587,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,43"
+          Size="150.666666666667,42.6666666666667"
           Id="Package\Load StageStatus\OLE DB Source"
-          TopLeft="127.249998193234,167.749997036159" />
+          TopLeft="194.749997187406,90.3999984192847" />
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load StageStatus\OLE DB Destination"
           TopLeft="135.62499797903,276.249995060265" />
         <EdgeLayout
           Id="Package\Load StageStatus.Paths[OLE DB Source Output]"
-          TopLeft="202.749998193234,210.749997036159">
+          TopLeft="270.083330520739,133.066665085951">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="18.874999785796,65.499998024106"
+              EndConnector="-48.4583325417089,143.183329974314"
               Start="0,0"
-              End="18.874999785796,57.999998024106">
+              End="-48.4583325417089,135.683329974314">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.749999012053" />
+                    End="0,67.5916649871568" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.749999012053"
-                    Point2="0,32.749999012053"
-                    Point3="4,32.749999012053" />
+                    Point1="0,67.5916649871568"
+                    Point2="0,71.5916649871568"
+                    Point3="-4,71.5916649871568" />
                   <mssgle:LineSegment
-                    End="14.874999785796,32.749999012053" />
+                    End="-44.4583325417089,71.5916649871568" />
                   <mssgle:CubicBezierSegment
-                    Point1="14.874999785796,32.749999012053"
-                    Point2="18.874999785796,32.749999012053"
-                    Point3="18.874999785796,36.749999012053" />
+                    Point1="-44.4583325417089,71.5916649871568"
+                    Point2="-48.4583325417089,71.5916649871568"
+                    Point3="-48.4583325417089,75.5916649871568" />
                   <mssgle:LineSegment
-                    End="18.874999785796,57.999998024106" />
+                    End="-48.4583325417089,135.683329974314" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
