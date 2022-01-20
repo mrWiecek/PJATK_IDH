@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{EF361A3B-65AB-41DD-A59C-597EF18F3A0C}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{50BF112B-5183-483F-8C6D-12FD9568E62A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -38,6 +38,18 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=MIREK;Initial Catalog=DWH_v2;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.DWH_v3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{92B9BC0F-7B66-4F23-9CBA-DF6DDAC7E5EE}"
+      DTS:ObjectName="MIREK.DWH_v3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=DWH_v3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -139,8 +151,8 @@ where [refTable].[idCustomer] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup Customer.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -297,8 +309,8 @@ where [refTable].[Date] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup Date.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -455,8 +467,8 @@ where [refTable].[idProduct] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup Product.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -613,8 +625,8 @@ where [refTable].[idSalesTerritory] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup SalesTerritory.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -771,8 +783,8 @@ where [refTable].[idStatus] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup Status.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -918,8 +930,8 @@ where [refTable].[idStatus] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1533,8 +1545,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Customer Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1781,8 +1793,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Date Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2166,8 +2178,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Product Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2546,8 +2558,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\SalesTerritory Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2870,8 +2882,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Status Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v2]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v2]"
+                      connectionManagerID="Package.ConnectionManagers[MIREK.DWH_v3]"
+                      connectionManagerRefId="Package.ConnectionManagers[MIREK.DWH_v3]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
