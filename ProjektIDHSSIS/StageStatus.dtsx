@@ -840,8 +840,8 @@
               <connections>
                 <connection
                   refId="Package\Load StageStatus\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -959,8 +959,8 @@
               <connections>
                 <connection
                   refId="Package\Load StageStatus\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>

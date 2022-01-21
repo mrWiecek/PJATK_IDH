@@ -163,8 +163,8 @@ where [refTable].[idCustomer] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup Customer.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -321,8 +321,8 @@ where [refTable].[Date] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup Date.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -479,8 +479,8 @@ where [refTable].[idProduct] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup Product.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -637,8 +637,8 @@ where [refTable].[idSalesTerritory] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup SalesTerritory.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -795,8 +795,8 @@ where [refTable].[idProductSpecialOffer] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup SpecialOffer.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -953,8 +953,8 @@ where [refTable].[idStatus] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\Lookup Status.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1100,8 +1100,8 @@ where [refTable].[idStatus] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1275,8 +1275,8 @@ where [refTable].[idStatus] = ?</property>
               <connections>
                 <connection
                   refId="Package\SalesOrder Fact\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1580,8 +1580,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Customer Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1689,8 +1689,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Customer Dimension\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1828,8 +1828,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Date Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1987,8 +1987,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Date Dimension\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2213,8 +2213,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Product Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2593,8 +2593,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\SalesTerritory Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2730,8 +2730,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\SalesTerritory Dimension\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2917,8 +2917,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\SpecialOffer Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3036,8 +3036,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\SpecialOffer Dimension\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3193,8 +3193,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Status Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3316,8 +3316,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Status Dimension\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
