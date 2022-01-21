@@ -65,6 +65,28 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
       <Value>100</Value>
     </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="205">
+            <Shape Id="Id Sales Territory Dwh" Expanded="false">
+              <Attributes>
+                <Attribute Id="Id Sales Territory Dwh" />
+                <Attribute Id="Id Sales Territory" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Country Region Code" Expanded="false">
+              <Attributes>
+                <Attribute Id="Country Region Code" />
+              </Attributes>
+              <Position x="281" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
@@ -102,10 +124,12 @@
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="ff163cfb-faf8-4e56-b6b6-ff028f0b85c0">
           <AttributeID>Id Sales Territory</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Id Sales Territory</Name>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="e678399d-c90d-4224-90f1-8dd32c41df59">
           <AttributeID>Country Region Code</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Country Region Code</Name>
         </AttributeRelationship>
       </AttributeRelationships>

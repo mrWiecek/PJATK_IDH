@@ -65,6 +65,40 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
       <Value>100</Value>
     </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="194">
+            <Shape Id="Id Product Dwh" Expanded="false">
+              <Attributes>
+                <Attribute Id="Id Product Dwh" />
+                <Attribute Id="Id Product" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Model Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Model Name" />
+              </Attributes>
+              <Position x="267" y="20" />
+            </Shape>
+            <Shape Id="Sub Category Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Sub Category Name" />
+              </Attributes>
+              <Position x="515" y="20" />
+            </Shape>
+            <Shape Id="Category Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Category Name" />
+              </Attributes>
+              <Position x="762" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
@@ -102,19 +136,13 @@
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="717c912d-265a-474d-860e-4207a5c99180">
           <AttributeID>Id Product</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Id Product</Name>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="07f0d0e2-cc60-44de-8446-6882dcbb74f7">
           <AttributeID>Model Name</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Model Name</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="49a18167-fab0-4e41-8532-fe8678330001">
-          <AttributeID>Sub Category Name</AttributeID>
-          <Name>Sub Category Name</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="5e5751bc-00ef-4383-81f5-3807f57e23a6">
-          <AttributeID>Category Name</AttributeID>
-          <Name>Category Name</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
@@ -149,6 +177,13 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="68c74ce8-120a-4c69-9823-a7b6354f56f8">
+          <AttributeID>Sub Category Name</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Sub Category Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
@@ -166,6 +201,13 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b34179b3-a376-440b-a4f1-30cc207a7d5e">
+          <AttributeID>Category Name</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Category Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>

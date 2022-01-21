@@ -275,6 +275,13 @@
                   <xs:element name="Day" msprop:design-time-name="c86cd0ba-3340-49b8-aa5b-f34e9cd7f551" msprop:DbColumnName="Day" msprop:FriendlyName="Day" type="xs:decimal" />
                   <xs:element name="Month" msprop:design-time-name="42b68f0e-95ff-439f-8c31-c7bb8dba2226" msprop:DbColumnName="Month" msprop:FriendlyName="Month" type="xs:decimal" />
                   <xs:element name="Year" msprop:design-time-name="86828bf9-7662-4c2c-98a6-edb36b08e69a" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:decimal" />
+                  <xs:element name="Month_x0020_of_x0020_the_x0020_Year" msdata:ReadOnly="true" msprop:design-time-name="81eacf7f-87e4-4b1a-bb08-5ea22f8c5846" msprop:IsLogical="True" msprop:Description="" msprop:DbColumnName="Month of the Year" msprop:ComputedColumnExpression="MonthNameEng + ' ' + CONVERT(CHAR (4), Year)" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="55" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
