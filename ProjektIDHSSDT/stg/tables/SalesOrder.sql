@@ -13,7 +13,8 @@
 		[idProduct],
 		[idTerritory],
 		[idStatus],
-		[Date]
+		[Date],
+		[idSpecialOffer]
     )
 
 )

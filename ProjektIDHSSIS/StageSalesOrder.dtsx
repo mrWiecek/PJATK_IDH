@@ -11,11 +11,23 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{1C0F01EC-D2F1-4EC1-A0E3-7D83EDB8C46D}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{E51B1098-203A-43CA-9500-7BEEF7D6681D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{10ADDBF1-328A-48FC-8A30-DE51B4A9C622}"
+      DTS:ObjectName="MIREK.AdventureDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=AdventureDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
       DTS:CreationName="OLEDB"
@@ -116,8 +128,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.Staging]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.Staging]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -154,12 +166,6 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderQty]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrderQty]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TotalDue]"
-                      cachedDataType="cy"
-                      cachedName="TotalDue"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalDue]"
-                      lineageId="Package\Data Flow Task\64:invalid" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Status]"
                       cachedDataType="ui1"
                       cachedName="Status"
@@ -172,48 +178,22 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrderDate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UnitPriceDiscount]"
-                      cachedDataType="cy"
-                      cachedName="UnitPriceDiscount"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPriceDiscount]"
-                      lineageId="Package\Data Flow Task\68:invalid" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
-                      cachedDataType="cy"
-                      cachedName="UnitPrice"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
-                      lineageId="Package\Data Flow Task\69:invalid" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SubTotal]"
-                      cachedDataType="cy"
-                      cachedName="SubTotal"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SubTotal]"
-                      lineageId="Package\Data Flow Task\70:invalid" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TaxAmt]"
-                      cachedDataType="cy"
-                      cachedName="TaxAmt"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmt]"
-                      lineageId="Package\Data Flow Task\71:invalid" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Freight]"
-                      cachedDataType="cy"
-                      cachedName="Freight"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Freight]"
-                      lineageId="Package\Data Flow Task\72:invalid" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SalesOrderDetailID]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SpecialOfferID]"
                       cachedDataType="i4"
-                      cachedName="SalesOrderDetailID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idSalesOrder]"
-                      lineageId="Package\Data Flow Task\62:invalid" />
+                      cachedName="SpecialOfferID"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idSpecialOffer]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SpecialOfferID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LineTotal]"
+                      cachedDataType="numeric"
+                      cachedName="LineTotal"
+                      cachedPrecision="38"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderValue]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[LineTotal]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idSalesOrder]"
-                      dataType="i4"
-                      name="idSalesOrder" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idCustomer]"
                       dataType="i4"
@@ -235,33 +215,17 @@
                       dataType="dbDate"
                       name="Date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalDue]"
-                      dataType="cy"
-                      name="TotalDue" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderQty]"
                       dataType="i4"
                       name="OrderQty" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idSpecialOffer]"
                       dataType="cy"
-                      name="UnitPrice" />
+                      name="idSpecialOffer" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPriceDiscount]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderValue]"
                       dataType="cy"
-                      name="UnitPriceDiscount" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SubTotal]"
-                      dataType="cy"
-                      name="SubTotal" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmt]"
-                      dataType="cy"
-                      name="TaxAmt" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Freight]"
-                      dataType="cy"
-                      name="Freight" />
+                      name="OrderValue" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -556,7 +520,7 @@ FROM            Sales.SalesOrderHeader INNER JOIN
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{93232291-BD77-471D-964A-D3F6AF16E0C1}"
+          SQLTask:Connection="{10ADDBF1-328A-48FC-8A30-DE51B4A9C622}"
           SQLTask:SqlStatementSource="truncate table stg.SalesOrder;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -586,25 +550,37 @@ FROM            Sales.SalesOrderHeader INNER JOIN
         <NodeLayout
           Size="150.666666666667,42"
           Id="Package\Data Flow Task"
-          TopLeft="630,247" />
+          TopLeft="478.125002263114,233.350000244081" />
         <NodeLayout
           Size="162.666666666667,42"
           Id="Package\Execute SQL Task"
-          TopLeft="631,65" />
+          TopLeft="455.375002617017,55.2500001743436" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="709,107">
+          TopLeft="536.70833595035,97.2500001743436">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,140"
+              EndConnector="16.7499996460974,136.100000069737"
               Start="0,0"
-              End="0,132.5">
+              End="16.7499996460974,128.600000069737">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,132.5" />
+                    End="0,64.0500000348687" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,64.0500000348687"
+                    Point2="0,68.0500000348687"
+                    Point3="4,68.0500000348687" />
+                  <mssgle:LineSegment
+                    End="12.7499996460974,68.0500000348687" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.7499996460974,68.0500000348687"
+                    Point2="16.7499996460974,68.0500000348687"
+                    Point3="16.7499996460974,72.0500000348687" />
+                  <mssgle:LineSegment
+                    End="16.7499996460974,128.600000069737" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -620,49 +596,35 @@ FROM            Sales.SalesOrderHeader INNER JOIN
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="560,77" />
+          TopLeft="345.625003194436,73.7500000581145" />
         <NodeLayout
           Size="170.666666666667,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="559,272" />
+          TopLeft="338.375003287569,257.050000267327" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="635,119">
+          TopLeft="422.166669907669,115.750000058115">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9.5,153"
+              EndConnector="0,141.300000209212"
               Start="0,0"
-              End="9.5,145.5">
+              End="0,133.800000209212">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,72.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,72.5"
-                    Point2="0,76.5"
-                    Point3="4,76.5" />
-                  <mssgle:LineSegment
-                    End="5.5,76.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.5,76.5"
-                    Point2="9.5,76.5"
-                    Point3="9.5,80.5" />
-                  <mssgle:LineSegment
-                    End="9.5,145.5" />
+                    End="0,133.800000209212" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-3.25,81.5,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
