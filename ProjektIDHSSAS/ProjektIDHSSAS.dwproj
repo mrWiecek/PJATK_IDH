@@ -6,10 +6,42 @@
     <Name>ProjektIDHSSAS.database</Name>
     <FullPath>ProjektIDHSSAS.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Adventure DWH.cube</Name>
+      <FullPath>Adventure DWH.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Adventure DWH.partitions</Name>
+          <FullPath>Adventure DWH.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
   <Dimensions>
     <ProjectItem>
       <Name>Product.dim</Name>
       <FullPath>Product.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Sales Territory.dim</Name>
+      <FullPath>Sales Territory.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Customer.dim</Name>
+      <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Date.dim</Name>
+      <FullPath>Date.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Status.dim</Name>
+      <FullPath>Status.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Special Offer.dim</Name>
+      <FullPath>Special Offer.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
