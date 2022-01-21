@@ -11,10 +11,48 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{90FF09A9-3E0F-4E67-A202-22A4D1DB0194}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{07AF3311-B806-43D1-9BB9-F3044381088A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FB7046D1-C0CC-493B-BF5B-8672F8340D8E}"
+      DTS:ObjectName="MIREK.AdventureDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=AdventureDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{468C684E-F806-4C7D-91F9-973A569CC595}"
+      DTS:ObjectName="MIREK.AdventureWorks2016">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=AdventureWorks2016;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.Staging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8D29E3CC-B419-469E-A61C-D4011C06335E}"
+      DTS:ObjectName="MIREK.Staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -473,8 +511,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -631,8 +669,8 @@ FROM Production.Product PP
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1381,19 +1419,19 @@ FROM Production.Product PP
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\truncate"
+      DTS:refId="Package\truncate Product"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{5BAA4274-D890-4D51-9858-06FCD57F198A}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="truncate"
+      DTS:ObjectName="truncate Product"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
+          SQLTask:Connection="{FB7046D1-C0CC-493B-BF5B-8672F8340D8E}"
           SQLTask:SqlStatementSource="truncate table stg.Product;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1403,7 +1441,7 @@ FROM Production.Product PP
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{D15FC3EA-FFFA-460C-B072-16C6F03CE223}"
-      DTS:From="Package\truncate"
+      DTS:From="Package\truncate Product"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
@@ -1421,27 +1459,39 @@ FROM Production.Product PP
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
+          Size="150.666666666667,42"
           Id="Package\Data Flow Task"
-          TopLeft="611,242" />
+          TopLeft="336.625004088506,230.950000197589" />
         <NodeLayout
-          Size="118,42"
-          Id="Package\truncate"
-          TopLeft="621,100" />
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\truncate Product"
+          TopLeft="317.875004516915,100" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="683.25,142">
+          TopLeft="396.541671183581,142.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,100"
+              EndConnector="15.416666238258,88.2833335309227"
               Start="0,0"
-              End="0,92.5">
+              End="15.416666238258,80.7833335309227">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,92.5" />
+                    End="0,40.1416667654614" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.1416667654614"
+                    Point2="0,44.1416667654614"
+                    Point3="4,44.1416667654614" />
+                  <mssgle:LineSegment
+                    End="11.416666238258,44.1416667654614" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.416666238258,44.1416667654614"
+                    Point2="15.416666238258,44.1416667654614"
+                    Point3="15.416666238258,48.1416667654614" />
+                  <mssgle:LineSegment
+                    End="15.416666238258,80.7833335309227" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1459,7 +1509,7 @@ FROM Production.Product PP
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="163,42"
+          Size="162.666666666667,42"
           Id="Package\Data Flow Task\Derived Column 1"
           TopLeft="512,386" />
         <NodeLayout
@@ -1467,7 +1517,7 @@ FROM Production.Product PP
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="775,74" />
         <NodeLayout
-          Size="163,42"
+          Size="162.666666666667,42"
           Id="Package\Data Flow Task\Derived Column 2"
           TopLeft="809,349" />
         <NodeLayout
@@ -1479,15 +1529,15 @@ FROM Production.Product PP
           Id="Package\Data Flow Task\Sort"
           TopLeft="781,687" />
         <NodeLayout
-          Size="121,42"
+          Size="121.333333333334,42"
           Id="Package\Data Flow Task\Union All"
           TopLeft="1149,562" />
         <NodeLayout
-          Size="155,42"
+          Size="154.666666666667,42"
           Id="Package\Data Flow Task\Conditional Split"
           TopLeft="781,165" />
         <NodeLayout
-          Size="171,42"
+          Size="170.666666666667,42"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="736,794" />
         <EdgeLayout

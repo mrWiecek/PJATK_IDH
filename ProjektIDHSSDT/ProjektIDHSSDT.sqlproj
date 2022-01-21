@@ -74,5 +74,12 @@
     <Build Include="stg\tables\ProductSpecialOffer.sql" />
     <Build Include="stg\tables\Product.sql" />
     <Build Include="stg\tables\SalesOrder.sql" />
+    <Build Include="dwh\Customer.sql" />
+    <Build Include="dwh\Date.sql" />
+    <Build Include="dwh\Product.sql" />
+    <Build Include="dwh\SalesTerritory.sql" />
+    <Build Include="dwh\Status.sql" />
+    <Build Include="dwh\SalesOrder.sql" />
+    <Build Include="dwh\SpecialOffer.sql" />
   </ItemGroup>
 </Project>

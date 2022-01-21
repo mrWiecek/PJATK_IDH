@@ -11,10 +11,36 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="StageDate"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{DD6AC36F-ECA6-4443-9BBB-58065704C08D}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{2BE74EB7-B908-4E2F-8D82-78D0B2988313}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{73345659-E386-4079-923C-0F9FADDDDBB0}"
+      DTS:ObjectName="MIREK.AdventureDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=AdventureDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.Staging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{983FFF8B-90A0-4C9F-9766-482224B0C948}"
+      DTS:ObjectName="MIREK.Staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -30,7 +56,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
+          SQLTask:Connection="{73345659-E386-4079-923C-0F9FADDDDBB0}"
           SQLTask:SqlStatementSource="truncate table stg.Date;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -47,7 +73,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
+          SQLTask:Connection="{73345659-E386-4079-923C-0F9FADDDDBB0}"
           SQLTask:SqlStatementSource="exec stg.InsertTime;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -75,27 +101,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
+          Size="162.666666666667,42"
           Id="Package\Execute SQL Task"
-          TopLeft="625,108" />
+          TopLeft="395.000003427267,71.6000006508827" />
         <NodeLayout
           Size="172,42"
           Id="Package\Execute SQL Task 1"
-          TopLeft="618,239" />
+          TopLeft="352.375003958121,216.250000406802" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="705.25,150">
+          TopLeft="476.3333367606,113.600000650883">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,89"
+              EndConnector="-37.9583328024796,102.649999755919"
               Start="0,0"
-              End="0,81.5">
+              End="-37.9583328024796,95.1499997559191">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.5" />
+                    End="0,47.3249998779595" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.3249998779595"
+                    Point2="0,51.3249998779595"
+                    Point3="-4,51.3249998779595" />
+                  <mssgle:LineSegment
+                    End="-33.9583328024796,51.3249998779595" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33.9583328024796,51.3249998779595"
+                    Point2="-37.9583328024796,51.3249998779595"
+                    Point3="-37.9583328024796,55.3249998779595" />
+                  <mssgle:LineSegment
+                    End="-37.9583328024796,95.1499997559191" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
