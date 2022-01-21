@@ -6,10 +6,43 @@
     <Name>ProjektIDHSSAS.database</Name>
     <FullPath>ProjektIDHSSAS.database</FullPath>
   </Database>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Product.dim</Name>
+      <FullPath>Product.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Adventure DWH.ds</Name>
+      <FullPath>Adventure DWH.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Adventure DWH.dsv</Name>
+      <FullPath>Adventure DWH.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Adventure DWH</Id>
+            <Name>Adventure DWH</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=MIREK;Integrated Security=SSPI;Initial Catalog=AdventureDWH</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Adventure DWH</Id>
+            <Name>Adventure DWH</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
