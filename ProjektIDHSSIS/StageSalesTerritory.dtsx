@@ -11,11 +11,23 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{FC55EF0A-781A-49C7-9CC9-B9EE2AA52BB9}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{5B3325F7-E548-4794-9D24-0A459850AB63}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2C298D48-AC6E-47CC-94FE-96257ECE98BC}"
+      DTS:ObjectName="MIREK.AdventureDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MIREK;Initial Catalog=AdventureDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
       DTS:CreationName="OLEDB"
@@ -234,8 +246,8 @@
               <connections>
                 <connection
                   refId="Package\Load StageSalesTerritory\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.Staging]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.Staging]"
+                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -494,7 +506,7 @@ FROM   Sales.SalesTerritory</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{F1599DD9-0C34-40C8-A56B-256899FF5BA8}"
+          SQLTask:Connection="{2C298D48-AC6E-47CC-94FE-96257ECE98BC}"
           SQLTask:SqlStatementSource="truncate table stg.SalesTerritory" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
