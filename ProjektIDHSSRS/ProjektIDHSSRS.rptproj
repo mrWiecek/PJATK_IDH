@@ -52,6 +52,7 @@
     <DataSource Include="Cube.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="AverageCustomerOrderValue.rdl" />
     <Report Include="BestMonth.rdl" />
     <Report Include="CancelledOrders.rdl" />
     <Report Include="MostOrdersByRegion.rdl" />
