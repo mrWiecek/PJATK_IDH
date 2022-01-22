@@ -80,5 +80,6 @@
     <Build Include="dwh\SalesTerritory.sql" />
     <Build Include="dwh\Status.sql" />
     <Build Include="dwh\SalesOrder.sql" />
+    <Build Include="dwh\SpecialOffer.sql" />
   </ItemGroup>
 </Project>

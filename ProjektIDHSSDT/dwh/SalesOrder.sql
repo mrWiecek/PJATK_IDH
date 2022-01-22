@@ -1,19 +1,14 @@
 ﻿CREATE TABLE [dwh].[SalesOrder]
 (
-	[idSalesOrder] INT nOT NULL,
 	[idCustomer_dwh] INT NOT NULL,
 	[idProduct_dwh] INT NOT NULL,
+	[idSpecialOffer_dwh] INT NOT NULL,
 	[idSalesTerritory_dwh] INT NOT NULL,
 	[idStatus_dwh] INT NOT NULL,
 	[idDate_dwh] INT NOT NULL,
-	[UnitPrice] [money] NOT NULL,
-	[UnitPriceDiscount] [money] NOT NULL,
-	[SubTotal] [money] NOT NULL,
-	[TaxAmt] [money] NOT NULL,
-	[Freight] [money] NOT NULL,
-	[TotalDue] MONEY NOT NULL,
+	[OrderValue] MONEY NOT NULL,
 	[OrderQty] INT NOT NULL,
-	PRIMARY KEY([idSalesOrder], [idCustomer_dwh], [idProduct_dwh], 
+	PRIMARY KEY([idCustomer_dwh], [idProduct_dwh], [idSpecialOffer_dwh],
 				[idSalesTerritory_dwh], [idStatus_dwh], [idDate_dwh]) 
 )
 GO
@@ -41,3 +36,9 @@ GO
 ALTER TABLE [dwh].[SalesOrder]
 ADD CONSTRAINT [fk_date]
 FOREIGN KEY(idDate_dwh) REFERENCES [dwh].[Date]
+GO
+
+ALTER TABLE [dwh].[SalesOrder]
+ADD CONSTRAINT [fk_specialoffer]
+FOREIGN KEY(idSpecialOffer_dwh) REFERENCES [dwh].[SpecialOffer]
+GO
