@@ -64,7 +64,7 @@
           <ConfigurationSetting>
             <Id>Adventure DWH</Id>
             <Name>Adventure DWH</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=MIREK;Integrated Security=SSPI;Initial Catalog=AdventureDWH</Value>
+            <Value xsi:type="xsd:string">Provider=MSOLEDBSQL.1;Data Source=(localdb)\MSSQLLocalDB;Integrated Security=SSPI;Initial Catalog=AdventureWorks2016</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
@@ -74,6 +74,7 @@
             <Value xsi:type="xsd:int">0</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>
+        <DeploymentServerVersion>14.0</DeploymentServerVersion>
       </Options>
     </Configuration>
   </Configurations>
