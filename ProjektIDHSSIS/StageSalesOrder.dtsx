@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{F3F6FFBA-41AF-4FEC-B123-AC0D95D09C17}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{88772958-1297-45F7-847B-B52348472FD3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -128,8 +128,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureDWH]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureDWH]"
+                  connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -311,8 +311,8 @@ order by Sales.SalesOrderHeader.OrderDate, Sales.SalesOrderHeader.CustomerID, Sa
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
-                  connectionManagerRefId="Package.ConnectionManagers[MIREK.AdventureWorks2016]"
+                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -522,7 +522,7 @@ order by Sales.SalesOrderHeader.OrderDate, Sales.SalesOrderHeader.CustomerID, Sa
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{10ADDBF1-328A-48FC-8A30-DE51B4A9C622}"
+          SQLTask:Connection="{75CB3994-4447-4C16-BE70-8F1003F0EF63}"
           SQLTask:SqlStatementSource="truncate table stg.SalesOrder;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -550,11 +550,11 @@ order by Sales.SalesOrderHeader.OrderDate, Sales.SalesOrderHeader.CustomerID, Sa
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42"
+          Size="151,42"
           Id="Package\Data Flow Task"
           TopLeft="478.125002263114,233.350000244081" />
         <NodeLayout
-          Size="162.666666666667,42"
+          Size="163,42"
           Id="Package\Execute SQL Task"
           TopLeft="455.375002617017,55.2500001743436" />
         <EdgeLayout
@@ -600,13 +600,13 @@ order by Sales.SalesOrderHeader.OrderDate, Sales.SalesOrderHeader.CustomerID, Sa
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="338.375003287569,257.050000267327" />
+        <NodeLayout
           Size="150,42"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="345.625003194436,73.7500000581145" />
-        <NodeLayout
-          Size="170.666666666667,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="338.375003287569,257.050000267327" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="422.166669907669,115.750000058115">

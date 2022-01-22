@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{68393C42-D643-4637-9C6C-49DEEFDDB323}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{C1B7C73D-71E7-4598-890D-50CE2C75529B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1580,8 +1580,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Customer Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1689,8 +1689,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Customer Dimension\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1807,11 +1807,11 @@ where [refTable].[idStatus] = ?</property>
                       dataType="System.Int32"
                       description="Specifies the mode used to access the database."
                       name="AccessMode"
-                      typeConverter="AccessMode">3</property>
+                      typeConverter="AccessMode">0</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
+                      name="FastLoadKeepIdentity">true</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
@@ -1828,8 +1828,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Date Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1987,8 +1987,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Date Dimension\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2213,8 +2213,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Product Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2370,8 +2370,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Product Dimension\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[MIREK.Staging]"
-                      connectionManagerRefId="Package.ConnectionManagers[MIREK.Staging]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2593,8 +2593,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\SalesTerritory Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2632,10 +2632,6 @@ where [refTable].[idStatus] = ?</property>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\SalesTerritory Dimension\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idSalesTerritory_dwh]"
-                          dataType="i4"
-                          name="idSalesTerritory_dwh" />
-                        <externalMetadataColumn
                           refId="Package\Sequence Container\SalesTerritory Dimension\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idSalesTerritory]"
                           dataType="i4"
                           name="idSalesTerritory" />
@@ -2651,6 +2647,10 @@ where [refTable].[idStatus] = ?</property>
                           dataType="str"
                           length="3"
                           name="countryRegionCode" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\SalesTerritory Dimension\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idSalesTerritory_dwh]"
+                          dataType="i4"
+                          name="idSalesTerritory_dwh" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -2730,8 +2730,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\SalesTerritory Dimension\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2917,8 +2917,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\SpecialOffer Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2951,7 +2951,7 @@ where [refTable].[idStatus] = ?</property>
                           name="idSpecialOffer_dwh" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\SpecialOffer Dimension\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idProductSpecialOffer]"
-                          dataType="i4"
+                          dataType="cy"
                           name="idProductSpecialOffer" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\SpecialOffer Dimension\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DiscountPercent]"
@@ -3036,8 +3036,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\SpecialOffer Dimension\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3193,8 +3193,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Status Dimension\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3224,10 +3224,6 @@ where [refTable].[idStatus] = ?</property>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Status Dimension\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idStatus_dwh]"
-                          dataType="i4"
-                          name="idStatus_dwh" />
-                        <externalMetadataColumn
                           refId="Package\Sequence Container\Status Dimension\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idStatus]"
                           dataType="i4"
                           name="idStatus" />
@@ -3237,6 +3233,10 @@ where [refTable].[idStatus] = ?</property>
                           dataType="str"
                           length="20"
                           name="orderstatus" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Status Dimension\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idStatus_dwh]"
+                          dataType="i4"
+                          name="idStatus_dwh" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -3316,8 +3316,8 @@ where [refTable].[idStatus] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Status Dimension\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A4D861F3-1462-45E4-B542-1A630F3017AB}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.AdventureWorks2016]"
+                      connectionManagerID="{75CB3994-4447-4C16-BE70-8F1003F0EF63}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[(localdb)_MSSQLLocalDB.GwiazdaLocal]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3407,6 +3407,16 @@ where [refTable].[idStatus] = ?</property>
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{9B88B9D9-CB9B-4BF6-B314-3F7D8AA409C4}"
+          DTS:From="Package\Sequence Container\Status Dimension"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Sequence Container\Product Dimension" />
+      </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
@@ -3432,38 +3442,72 @@ where [refTable].[idStatus] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153.333333333334,42.6666666666667"
+          Size="153,43"
           Id="Package\SalesOrder Fact"
           TopLeft="163.749997559935,352.949993688762" />
         <NodeLayout
-          Size="177.333333333334,42.6666666666667"
+          Size="177,43"
           Id="Package\Sequence Container\Customer Dimension"
-          TopLeft="14.3333328117927,132.449996594489" />
+          TopLeft="29.8749999720603,132.449996594489" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\Sequence Container\Date Dimension"
-          TopLeft="215.583329812934,82.3999974894524" />
+          TopLeft="231.124996973202,82.3999974894524" />
         <NodeLayout
-          Size="168,42.6666666666667"
+          Size="168,43"
           Id="Package\Sequence Container\Product Dimension"
-          TopLeft="12.4583328397324,75.2499976173043" />
+          TopLeft="28,75.2499976173043" />
         <NodeLayout
-          Size="196.666666666667,42.6666666666667"
+          Size="197,43"
           Id="Package\Sequence Container\SalesTerritory Dimension"
-          TopLeft="186.208330250655,27.1499984773994" />
+          TopLeft="201.749997410923,27.1499984773994" />
         <NodeLayout
-          Size="161.333333333334,42.6666666666667"
-          Id="Package\Sequence Container\Status Dimension"
-          TopLeft="12.4583328397324,20.6499985936284" />
-        <NodeLayout
-          Size="189.333333333334,42.6666666666667"
+          Size="189,43"
           Id="Package\Sequence Container\SpecialOffer Dimension"
-          TopLeft="205.958330045765,133.666663179795" />
+          TopLeft="221.499997206033,133.666663179795" />
+        <NodeLayout
+          Size="161,43"
+          Id="Package\Sequence Container\Status Dimension"
+          TopLeft="28,20.6499985936284" />
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          TopLeft="28,42.1499985936284">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.5999990236759"
+              Start="0,0"
+              End="-7.5,54.5999990236759">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,50.5999990236759" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,50.5999990236759"
+                    Point2="-22.5,54.5999990236759"
+                    Point3="-18.5,54.5999990236759" />
+                  <mssgle:LineSegment
+                    End="-7.5,54.5999990236759" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="454.666666666667,250.666666666667"
-          Size="454.666666666667,294"
+          PanelSize="455,251"
+          Size="455,294"
           Id="Package\Sequence Container"
           TopLeft="14.3749997857958,18.8499996629357" />
         <EdgeLayout
@@ -3497,33 +3541,37 @@ where [refTable].[idStatus] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
-          Id="Package\SalesOrder Fact\Lookup Date"
-          TopLeft="194,192" />
-        <NodeLayout
-          Size="181.333333333334,42.6666666666667"
-          Id="Package\SalesOrder Fact\Lookup SalesTerritory"
-          TopLeft="365,377" />
-        <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\SalesOrder Fact\OLE DB Destination"
           TopLeft="655,578.333333333333" />
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\SalesOrder Fact\OLE DB Source"
           TopLeft="24,23" />
         <NodeLayout
-          Size="161.333333333334,42.6666666666667"
+          Size="139,43"
+          Id="Package\SalesOrder Fact\Lookup Date"
+          TopLeft="194,192" />
+        <NodeLayout
+          Size="181,43"
+          Id="Package\SalesOrder Fact\Lookup SalesTerritory"
+          TopLeft="365,377" />
+        <NodeLayout
+          Size="147,49"
+          Id="Package\SalesOrder Fact\Lookup Status"
+          TopLeft="252,472" />
+        <NodeLayout
+          Size="161,43"
           Id="Package\SalesOrder Fact\Lookup Customer"
           TopLeft="67,98" />
         <NodeLayout
-          Size="153.333333333334,42.6666666666667"
+          Size="153,43"
           Id="Package\SalesOrder Fact\Lookup Product"
           TopLeft="292,283" />
         <NodeLayout
-          Size="146.666666666667,48.6666666666667"
-          Id="Package\SalesOrder Fact\Lookup Status"
-          TopLeft="252,472" />
+          Size="173,43"
+          Id="Package\SalesOrder Fact\Lookup SpecialOffer"
+          TopLeft="423,546.333333333333" />
         <EdgeLayout
           Id="Package\SalesOrder Fact.Paths[OLE DB Source Output]"
           TopLeft="99.3333333333333,65.6666666666667">
@@ -3556,6 +3604,78 @@ where [refTable].[idStatus] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesOrder Fact.Paths[Lookup Match Output5]"
+          TopLeft="596.333333333333,567.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.6666666666667,31.9999999999999"
+              Start="0,0"
+              End="51.1666666666667,31.9999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="25.3333333333334,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.3333333333334,0"
+                    Point2="29.3333333333334,0"
+                    Point3="29.3333333333334,4" />
+                  <mssgle:LineSegment
+                    End="29.3333333333334,27.9999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.3333333333334,27.9999999999999"
+                    Point2="29.3333333333334,31.9999999999999"
+                    Point3="33.3333333333334,31.9999999999999" />
+                  <mssgle:LineSegment
+                    End="51.1666666666667,31.9999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-18.8580533854166,-17.609375,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesOrder Fact.Paths[Lookup Match Output4]"
+          TopLeft="325.333333333333,520.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="184.333333333333,25.6666666666665"
+              Start="0,0"
+              End="184.333333333333,18.1666666666665">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.83333333333326" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.83333333333326"
+                    Point2="0,12.8333333333333"
+                    Point3="4,12.8333333333333" />
+                  <mssgle:LineSegment
+                    End="180.333333333333,12.8333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="180.333333333333,12.8333333333333"
+                    Point2="184.333333333333,12.8333333333333"
+                    Point3="184.333333333333,16.8333333333333" />
+                  <mssgle:LineSegment
+                    End="184.333333333333,18.1666666666665" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="43.9752799479167,17.8333333333333,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3662,7 +3782,7 @@ where [refTable].[idStatus] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="4.30861328125003,29.1666666666667,96.3827734375,11.609375"
+              BoundingBox="4.30861328125,29.1666666666667,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3698,135 +3818,13 @@ where [refTable].[idStatus] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="9.80861328124997,30.6666666666667,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="173.333333333334,42.6666666666667"
-          Id="Package\SalesOrder Fact\Lookup SpecialOffer"
-          TopLeft="423,546.333333333333" />
-        <EdgeLayout
-          Id="Package\SalesOrder Fact.Paths[Lookup Match Output4]"
-          TopLeft="325.333333333333,520.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="184.333333333333,25.6666666666665"
-              Start="0,0"
-              End="184.333333333333,18.1666666666665">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.83333333333326" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.83333333333326"
-                    Point2="0,12.8333333333333"
-                    Point3="4,12.8333333333333" />
-                  <mssgle:LineSegment
-                    End="180.333333333333,12.8333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="180.333333333333,12.8333333333333"
-                    Point2="184.333333333333,12.8333333333333"
-                    Point3="184.333333333333,16.8333333333333" />
-                  <mssgle:LineSegment
-                    End="184.333333333333,18.1666666666665" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="43.9752799479167,17.8333333333333,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SalesOrder Fact.Paths[Lookup Match Output5]"
-          TopLeft="596.333333333333,567.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="58.6666666666667,31.9999999999999"
-              Start="0,0"
-              End="51.1666666666667,31.9999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="25.3333333333334,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25.3333333333334,0"
-                    Point2="29.3333333333334,0"
-                    Point3="29.3333333333334,4" />
-                  <mssgle:LineSegment
-                    End="29.3333333333334,27.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="29.3333333333334,27.9999999999999"
-                    Point2="29.3333333333334,31.9999999999999"
-                    Point3="33.3333333333334,31.9999999999999" />
-                  <mssgle:LineSegment
-                    End="51.1666666666667,31.9999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-18.8580533854166,-17.609375,96.3827734375,11.609375"
+              BoundingBox="9.80861328125,30.6666666666667,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\SalesOrder Fact\Lookup Date">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dwh].[Date]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SalesOrder Fact\Lookup SalesTerritory">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dwh].[SalesTerritory]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\SalesOrder Fact\OLE DB Destination">
     <Properties>
@@ -3854,22 +3852,22 @@ where [refTable].[idStatus] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\SalesOrder Fact\Lookup Customer">
+    design-time-name="Package\SalesOrder Fact\Lookup Date">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dwh].[Customer]</Value>
+          type="q3:string">[dwh].[Date]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3877,7 +3875,7 @@ where [refTable].[idStatus] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\SalesOrder Fact\Lookup Product">
+    design-time-name="Package\SalesOrder Fact\Lookup SalesTerritory">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -3887,7 +3885,7 @@ where [refTable].[idStatus] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dwh].[Product]</Value>
+          type="q3:string">[dwh].[SalesTerritory]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -3922,17 +3920,86 @@ where [refTable].[idStatus] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SalesOrder Fact\Lookup Customer">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dwh].[Customer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SalesOrder Fact\Lookup Product">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dwh].[Product]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SalesOrder Fact\Lookup SpecialOffer">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dwh].[SpecialOffer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Sequence Container\Customer Dimension">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Sequence Container\Customer Dimension\OLE DB Destination"
           TopLeft="341,317" />
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\Sequence Container\Customer Dimension\OLE DB Source"
           TopLeft="252,188" />
         <EdgeLayout
@@ -4004,11 +4071,11 @@ where [refTable].[idStatus] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\Sequence Container\Date Dimension\OLE DB Source"
           TopLeft="222,135" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Sequence Container\Date Dimension\OLE DB Destination"
           TopLeft="485,275" />
         <EdgeLayout
@@ -4080,11 +4147,11 @@ where [refTable].[idStatus] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\Sequence Container\Product Dimension\OLE DB Source"
           TopLeft="283,121" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Sequence Container\Product Dimension\OLE DB Destination"
           TopLeft="368,254" />
         <EdgeLayout
@@ -4156,39 +4223,39 @@ where [refTable].[idStatus] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="150,42"
           Id="Package\Sequence Container\SalesTerritory Dimension\OLE DB Source"
           TopLeft="315,111" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Sequence Container\SalesTerritory Dimension\OLE DB Destination"
           TopLeft="375,269" />
         <EdgeLayout
           Id="Package\Sequence Container\SalesTerritory Dimension.Paths[OLE DB Source Output]"
-          TopLeft="390.333333333333,153.666666666667">
+          TopLeft="390,153">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70.6666666666667,115.333333333333"
+              EndConnector="71,116"
               Start="0,0"
-              End="70.6666666666667,107.833333333333">
+              End="71,108.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.6666666666667" />
+                    End="0,54" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,53.6666666666667"
-                    Point2="0,57.6666666666667"
-                    Point3="4,57.6666666666667" />
+                    Point1="0,54"
+                    Point2="0,58"
+                    Point3="4,58" />
                   <mssgle:LineSegment
-                    End="66.6666666666667,57.6666666666667" />
+                    End="67,58" />
                   <mssgle:CubicBezierSegment
-                    Point1="66.6666666666667,57.6666666666667"
-                    Point2="70.6666666666667,57.6666666666667"
-                    Point3="70.6666666666667,61.6666666666667" />
+                    Point1="67,58"
+                    Point2="71,58"
+                    Point3="71,62" />
                   <mssgle:LineSegment
-                    End="70.6666666666667,107.833333333333" />
+                    End="71,108.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4227,16 +4294,92 @@ where [refTable].[idStatus] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Sequence Container\SpecialOffer Dimension">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,43"
+          Id="Package\Sequence Container\SpecialOffer Dimension\OLE DB Source"
+          TopLeft="162,91" />
+        <NodeLayout
+          Size="172,43"
+          Id="Package\Sequence Container\SpecialOffer Dimension\OLE DB Destination"
+          TopLeft="252,214" />
+        <EdgeLayout
+          Id="Package\Sequence Container\SpecialOffer Dimension.Paths[OLE DB Source Output]"
+          TopLeft="237.333333333333,133.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100.666666666667,80.3333333333333"
+              Start="0,0"
+              End="100.666666666667,72.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.1666666666667"
+                    Point2="0,40.1666666666667"
+                    Point3="4,40.1666666666667" />
+                  <mssgle:LineSegment
+                    End="96.6666666666667,40.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="96.6666666666667,40.1666666666667"
+                    Point2="100.666666666667,40.1666666666667"
+                    Point3="100.666666666667,44.1666666666667" />
+                  <mssgle:LineSegment
+                    End="100.666666666667,72.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\SpecialOffer Dimension\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\SpecialOffer Dimension\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Sequence Container\Status Dimension">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\Sequence Container\Status Dimension\OLE DB Source"
           TopLeft="59.3749991152436,68.899998767972" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Sequence Container\Status Dimension\OLE DB Destination"
           TopLeft="259.999996125698,163.799997071028" />
         <EdgeLayout
@@ -4299,105 +4442,6 @@ where [refTable].[idStatus] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Sequence Container\SpecialOffer Dimension">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150.666666666667,42.6666666666667"
-          Id="Package\Sequence Container\SpecialOffer Dimension\OLE DB Source"
-          TopLeft="162,91" />
-        <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Sequence Container\SpecialOffer Dimension\OLE DB Destination"
-          TopLeft="252,214" />
-        <EdgeLayout
-          Id="Package\Sequence Container\SpecialOffer Dimension.Paths[OLE DB Source Output]"
-          TopLeft="237.333333333333,133.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="100.666666666667,80.3333333333333"
-              Start="0,0"
-              End="100.666666666667,72.8333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.1666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.1666666666667"
-                    Point2="0,40.1666666666667"
-                    Point3="4,40.1666666666667" />
-                  <mssgle:LineSegment
-                    End="96.6666666666667,40.1666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="96.6666666666667,40.1666666666667"
-                    Point2="100.666666666667,40.1666666666667"
-                    Point3="100.666666666667,44.1666666666667" />
-                  <mssgle:LineSegment
-                    End="100.666666666667,72.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\SpecialOffer Dimension\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\SpecialOffer Dimension\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SalesOrder Fact\Lookup SpecialOffer">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dwh].[SpecialOffer]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
